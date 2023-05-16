@@ -1,0 +1,123 @@
+$bg-color: rgb(8, 8, 8) ;
+.banner{
+    height: 400px;
+    background-color: $bg-color;
+    background-size:100% 180%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 3rem;
+    box-sizing: border-box;
+
+    &::after{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0%;
+        left: 0%;
+        background-color: $bg-color;
+        opacity: 0.4;
+    }
+
+    h1,p{
+        color: white;
+        font-size: 2rem;
+        width: 40%;
+        z-index: 10;
+    }
+    p{
+        font-size: 0.8rem;
+        letter-spacing: 3px;
+        word-spacing: 2px;
+        font-weight: 100;
+    }
+    >div{
+        display: flex;
+
+        button{
+            padding: 1rem;
+            width: 120px;
+            outline: none;
+            border-radius:5px ;
+            border: none;
+            margin: 1rem;
+            z-index: 10;
+            cursor: pointer;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.5s;
+
+            &:hover{
+                opacity: 0.7;
+            }
+
+            &:nth-child(odd){
+                background-color: rgb(170, 11, 11);
+                color: white;
+            }
+            &:nth-child(even){
+                background-color: white;
+            }
+            svg{
+                font-size: 1.1rem;
+                margin: 0 5px;
+            }
+        }
+    }
+
+
+    }
+
+.row{
+    background-color: $bg-color;
+    padding: 1rem;
+    >h2{
+        margin: 0.3rem;
+        font-weight: 400;
+    }
+    >div {
+        display: flex;
+        overflow-x: auto ;
+    }
+
+}
+
+.card{
+        width:200px;
+        margin: 0.5rem;
+        cursor: pointer;
+        transition: transform 0.5s;
+        &:hover{
+            transform: translateY(-10px);
+        }
+}
+
+.genreBox {
+    background-color: $bg-color;
+    height: 100px;
+    display: flex;
+    overflow-x: auto;
+    >a{
+        color: black;
+        background-color: white;
+        padding: 1rem 0;
+        text-align: center;
+        border-radius: 5px;
+        transition:all 0.5s;
+        min-width: 10rem;
+        margin: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover{
+            background-color: rgb(180, 179, 179);
+        }
+    }
+}
